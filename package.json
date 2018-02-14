@@ -4,8 +4,17 @@
   "description":
     "A flexbox grid system built with styled-components and based on the Solved by Flexbox implementation.",
   "main": "lib/index.js",
-  "author": "Jake Wiesler <jakewiesler@gmail.com>",
+  "author": "Jake Wiesler <jakewiesler@gmail.com> (https://www.jakewiesler.com/)",
   "license": "MIT",
+  "keywords": [
+    "components",
+    "ui",
+    "react",
+    "styled-components",
+    "flexbox",
+    "grid system",
+    "component library"
+  ],
   "scripts": {
     "build": "babel src -d lib",
     "clean:lib": "rimraf lib",
@@ -32,5 +41,13 @@
   },
   "dependencies": {
     "prop-types": "^15.6.0"
+  },
+  "homepage": "https://github.com/jakewies/flexomatic",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakewies/flexomatic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jakewies/flexomatic/issues"
   }
 }
