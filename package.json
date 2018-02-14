@@ -7,7 +7,10 @@
   "scripts": {
     "build": "babel src -d lib",
     "clean:lib": "rimraf lib",
-    "dev": "yarn clean:lib && babel src -w -d lib"
+    "dev": "yarn clean:lib && babel src -w -d lib",
+    "lint": "eslint src",
+    "precommit": "yarn lint",
+    "prepush": "yarn lint"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -15,6 +18,9 @@
     "babel-plugin-styled-components": "^1.5.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "eslint": "^4.17.0",
+    "eslint-plugin-react": "^7.6.1",
+    "husky": "^0.14.3",
     "react": "^16.2.0",
     "rimraf": "^2.6.2",
     "styled-components": "^3.1.6"
