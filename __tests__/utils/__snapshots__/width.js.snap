@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`width utility formats resolved width into media query for given screen size 1`] = `
+"
+    @media (min-width: 1024px) {
+      width: 50%;
+    }
+  "
+`;

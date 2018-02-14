@@ -5,6 +5,7 @@ import { align } from '../utils'
 const Grid = styled.div`
   box-sizing: border-box;
   display: flex;
+  flex-direction: ${props => (props.column ? 'column' : 'row')};
   align-items: ${props => align(props.align)};
   flex-wrap: wrap;
   list-style: none;
