@@ -1,10 +1,16 @@
+# Flexomatic
+
+A component-based flexbox grid system for React, built with styled-components and based on the [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/demos/grids/) implementation.
+
 ## Components
 
 ### Grid
 
 The parent container that initializes a grid system. Think of it like a row in a bootstrap grid system.
 
-#### Available props
+```javascript
+<Grid flexCells />
+```
 
 `flexCells`
 
@@ -12,7 +18,9 @@ If passed to the `Grid` component, all children `Cells` will have a `display` pr
 
 ### Cell
 
-#### Available props
+```javascript
+<Cell flexed width />
+```
 
 `flexed`
 
