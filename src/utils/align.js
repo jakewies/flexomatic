@@ -5,7 +5,7 @@ export default function align(position) {
   case 'center':
     return 'center'
   case 'end':
-    return 'end'
+    return 'flex-end'
   case 'baseline':
     return 'baseline'
   default:

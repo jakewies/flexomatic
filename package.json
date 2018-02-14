@@ -18,9 +18,9 @@
   "scripts": {
     "build": "babel src -d lib",
     "clean:lib": "rimraf lib",
-    "dev": "yarn clean:lib && babel src -w -d lib",
+    "dev": "yarn clean:lib && babel src -w -d lib --source-maps inline",
     "lint": "eslint src",
-    "precommit": "yarn lint",
+    "precommit": "yarn lint && yarn test",
     "prepush": "yarn lint",
     "test": "jest",
     "test:watch": "jest --watch"

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
-import { align } from '../utils'
-import { number, bool, node } from 'prop-types'
+import { align, width } from '../utils'
+import { string, number, array, bool, node, oneOfType } from 'prop-types'
 
 // Can I add defaultProps to make the resolution of some of these dynamic styles
 // any easier?
@@ -9,24 +9,26 @@ const Cell = styled.div`
   box-sizing: border-box;
   padding: 1em 0 0 1em;
   display: ${props => (props.flexed ? 'flex' : 'block')};
-  align-self: ${props => align(props.align)};
-  ${props => (props.width ? widthMixin : 'flex: 1')};
+  ${props => props.align && `align-self: ${align(props.align)}`};
+  ${props => (props.width && props.width !== 'auto' ? widthMixins.custom : widthMixins.default)};
 `
 
 Cell.propTypes = {
-  size: number,
+  align: string,
+  children: node,
   flexed: bool,
-  children: node
+  width: oneOfType([number, string, array])
 }
 
-// handles width of cell if passed as a prop
-const widthMixin = css`
-  width: ${props => width(props.width)};
-  flex: none;
-`
-
-function width(n) {
-  return `${n * 100}%`
+const widthMixins = {
+  default: css`
+    width: auto;
+    flex: 1;
+  `,
+  custom: css`
+    ${props => width(props.width)};
+    flex: none;
+  `
 }
 
 export default Cell
