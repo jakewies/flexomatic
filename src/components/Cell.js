@@ -1,15 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { align } from '../utils'
 import { number, bool, node } from 'prop-types'
 
-export default function Cell(props) {
-  const dynamicStyles = getDynamicStyles(props)
-  const styles = generateStyles(defaultStyles, dynamicStyles)
-  const Component = styled.div`
-    ${styles};
-  `
-  return <Component>{props.children}</Component>
-}
+// Can I add defaultProps to make the resolution of some of these dynamic styles
+// any easier?
+// see: https://stackoverflow.com/questions/45977114/using-proptypes-and-defaultprops-for-a-styled-component
+const Cell = styled.div`
+  box-sizing: border-box;
+  padding: 1em 0 0 1em;
+  display: ${props => (props.flexed ? 'flex' : 'block')};
+  align-self: ${props => align(props.align)};
+  ${props => (props.width ? widthMixin : 'flex: 1')};
+`
 
 Cell.propTypes = {
   size: number,
@@ -17,41 +19,14 @@ Cell.propTypes = {
   children: node
 }
 
-const defaultStyles = {
-  'box-sizing': 'border-box',
-  display: 'block',
-  flex: 1,
-  padding: '1em 0 0 1em',
-  width: 'auto'
+// handles width of cell if passed as a prop
+const widthMixin = css`
+  width: ${props => width(props.width)};
+  flex: none;
+`
+
+function width(n) {
+  return `${n * 100}%`
 }
 
-function getDynamicStyles(options) {
-  const { flexed, size } = options
-  const styles = {}
-
-  if (flexed) {
-    styles.display = 'flex'
-  }
-
-  if (size) {
-    styles.width = calcSize(size)
-    styles.flex = 'none'
-  }
-
-  return styles
-}
-
-function generateStyles(defaultStyles, dynamicStyles) {
-  const stylesAsObj = Object.assign({}, defaultStyles, dynamicStyles)
-  return convertStylesToTemplateLiteral(stylesAsObj)
-}
-
-function convertStylesToTemplateLiteral(styles) {
-  return Object.keys(styles)
-    .reduce((accum, key) => `${accum} ${key}: ${styles[key]};`, ``)
-    .trim()
-}
-
-function calcSize(size) {
-  return `${size * 100}%`
-}
+export default Cell

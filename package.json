@@ -5,9 +5,9 @@
   "author": "Jake Wiesler <jakewiesler@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "yarn clean:lib && babel src -w -d lib",
     "build": "babel src -d lib",
-    "clean:lib": "rimraf lib"
+    "clean:lib": "rimraf lib",
+    "dev": "yarn clean:lib && babel src -w -d lib"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

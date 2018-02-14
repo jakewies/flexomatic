@@ -1,1 +1,1 @@
-export { Grid, Cell } from './components'
+export { Grid, Cell, Demo } from './components'
