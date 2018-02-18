@@ -2,6 +2,17 @@
 
 A component-based flexbox grid system for React, built with `styled-components` and based on the [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/demos/grids/) implementation.
 
+### Why should you use this?
+
+`flexomatic` aims to be a very simple, lightweight grid system with a flexible API that allows you to get up and running in seconds. It is based on the methodology proposed in [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/demos/grids/), where the goal is to expose a minimal grid system that doesn't weigh the user down with a multitude of options.
+
+### Features
+
+* Each `Cell` component is the same width by default
+* Full control over individual `Cell` components, including width and alignment
+* Responsive, with media query support
+* Nested Grids
+
 ## Getting started
 
 ```
@@ -22,17 +33,6 @@ const App = () => (
   </Grid>
 )
 ```
-
-### Why should you use this?
-
-`flexomatic` aims to be a very simple, lightweight grid system with a flexible API that allows you to get up and running in seconds. It is based on the methodology proposed in [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/demos/grids/), where the goal is to expose a minimal grid system that doesn't weigh the user down with a multitude of options.
-
-### Features
-
-* Each `Cell` component is the same width by default
-* Full control over individual `Cell` components, including width and alignment
-* Responsive, with media query support
-* Nested Grids
 
 ### Grid
 

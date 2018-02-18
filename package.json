@@ -21,7 +21,7 @@
     "dev": "yarn clean:lib && babel src -w -d lib --source-maps inline",
     "lint": "eslint src",
     "precommit": "yarn lint && yarn test",
-    "prepush": "yarn lint",
+    "prepush": "yarn lint && yarn test",
     "test": "jest",
     "test:watch": "jest --watch"
   },
