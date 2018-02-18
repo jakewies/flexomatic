@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cell renders 1`] = `
+.c0 {
+  box-sizing: border-box;
+  padding: 1em 0 0 1em;
+  display: block;
+  width: auto;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+  className="c0"
+>
+  Test Cell
+</div>
+`;
+
+exports[`Cell renders with proper width 1`] = `
+.c0 {
+  box-sizing: border-box;
+  padding: 1em 0 0 1em;
+  display: block;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    width: 50%;
+  }
+}
+
+<div
+  className="c0"
+  width={0.5}
+>
+  Test
+</div>
+`;

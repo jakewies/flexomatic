@@ -18,10 +18,12 @@
   "scripts": {
     "build": "babel src -d lib",
     "clean:lib": "rimraf lib",
-    "dev": "yarn clean:lib && babel src -w -d lib",
+    "dev": "yarn clean:lib && babel src -w -d lib --source-maps inline",
     "lint": "eslint src",
-    "precommit": "yarn lint",
-    "prepush": "yarn lint"
+    "precommit": "yarn lint && yarn test",
+    "prepush": "yarn lint && yarn test",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -32,7 +34,10 @@
     "eslint": "^4.17.0",
     "eslint-plugin-react": "^7.6.1",
     "husky": "^0.14.3",
+    "jest": "^22.3.0",
+    "jest-styled-components": "^4.11.0-1",
     "react": "^16.2.0",
+    "react-test-renderer": "^16.2.0",
     "rimraf": "^2.6.2",
     "styled-components": "^3.1.6"
   },
@@ -41,6 +46,9 @@
   },
   "dependencies": {
     "prop-types": "^15.6.0"
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-node"
   },
   "homepage": "https://github.com/jakewies/flexomatic",
   "repository": {
