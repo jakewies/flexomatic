@@ -61,6 +61,15 @@ Sets the `flex-direction` of the grid. Available options:
 * `column`
 * `column-reverse`
 
+`align`
+
+Aligns `Cell` children using the `align-items` style. Available options:
+
+* `start`
+* `center`
+* `end`
+* `baseline`
+
 ### Cell
 
 The individual columns of a grid.
@@ -88,15 +97,18 @@ Using a number or keyword, you can explicitly set the `width` of a `Cell` as a p
   <Cell width={1/2} />  // width: 50%
 
   <Cell width={0.25} /> // width: 25%
+```
 
+The `Cell` component expects number values for its `width` prop to be greater than 0 and less than or equal to 1.
 
+```javascript
   // as keyword
   <Cell width="full" /> // width: 100%
 
   <Cell width="half" /> // width: 50%
 ```
 
-**keywords**
+The available keywords for the `width` component are `full`, `half`, `third`, and `fourth`.
 
 | keyword | Width  |
 | ------- | ------ |

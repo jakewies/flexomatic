@@ -39,6 +39,10 @@ describe('width utility', () => {
     expect(() => width(2)).toThrow()
   })
 
+  it('throws when width prop receives a number less than or equal to 0', () => {
+    expect(() => width(0)).toThrow()
+  })
+
   it('throws when width prop receives an unknown keyword', () => {
     const keyword = 'test'
     expect(() => width(keyword)).toThrow()

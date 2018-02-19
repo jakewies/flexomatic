@@ -1,14 +1,6 @@
-export default function align(position) {
-  switch (position) {
-  case 'start':
-    return 'flex-start'
-  case 'center':
-    return 'center'
-  case 'end':
-    return 'flex-end'
-  case 'baseline':
-    return 'baseline'
-  default:
-    return 'stretch'
-  }
+export default {
+  start: 'flex-start',
+  center: 'center',
+  end: 'flex-end',
+  baseline: 'baseline'
 }

@@ -39,8 +39,8 @@ const resolve = widths => {
       // If the passed width value is greater than 1 return an error. Since the width API
       // returns a percentage width for numbers passed to the API, having a number greater than
       // 1 means having a width percentage for a given component greater than 100%.
-      if (w > 1) {
-        throw `Width prop received a value of ${w}. Width prop does not accept values greater than 1.`
+      if (w > 1 || w <= 0) {
+        throw `Width prop received a value of ${w}. Width prop does not accept values greater than 1 or less than or equal to 0.`
       }
       return `${w * 100}%`
     } catch (err) {
