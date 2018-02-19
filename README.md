@@ -1,4 +1,6 @@
-# Flexomatic
+<p align="center">
+  <img src="flexomatic.png" alt="Flexomatic" title="Flexomatic" width="435" height="167.5" />
+</p>
 
 A component-based flexbox grid system for React, built with `styled-components` and based on the [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/demos/grids/) implementation.
 
