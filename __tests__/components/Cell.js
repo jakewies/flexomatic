@@ -13,4 +13,9 @@ describe('Cell', () => {
     const tree = renderer.create(<Cell width={1 / 2}>Test</Cell>).toJSON()
     expect(tree).toMatchSnapshot()
   })
+
+  it('renders with multiple widths', () => {
+    const tree = renderer.create(<Cell width={[1, 'half', 0.25]}>Test</Cell>).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 })

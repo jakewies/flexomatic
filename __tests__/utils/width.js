@@ -12,18 +12,18 @@ describe('width utility', () => {
   })
 
   it('resolves width when given an array of numbers', () => {
-    const result = resolve([1 / 4, 1 / 2, 1])
-    expect(result).toEqual(['25%', '50%', '100%'])
+    const result = resolve([1, 1 / 2, 1 / 4])
+    expect(result).toEqual(['100%', '50%', '25%'])
   })
 
   it('resolves width when given an array of keywords', () => {
-    const result = resolve(['fourth', 'half', 'full'])
-    expect(result).toEqual(['25%', '50%', '100%'])
+    const result = resolve(['full', 'half', 'fourth'])
+    expect(result).toEqual(['100%', '50%', '25%'])
   })
 
   it('resolves width when given a mixed array of numbers and keywords', () => {
-    const result = resolve(['fourth', 1 / 2, 'full'])
-    expect(result).toEqual(['25%', '50%', '100%'])
+    const result = resolve(['full', 1 / 2, 'fourth'])
+    expect(result).toEqual(['100%', '50%', '25%'])
   })
 
   it('formats resolved width into media query for given screen size', () => {

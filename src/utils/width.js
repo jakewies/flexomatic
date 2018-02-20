@@ -6,12 +6,6 @@ import media from './media'
 const width = n =>
   resolve(asArray(n))
     .map((w, i) => format(w, screenMappings[i]))
-    // In order to account for CSS specificity the widths array
-    // must be reversed so that the widths for smaller screenSizes
-    // are being processed first. If they were being processed last
-    // they would exist further down the cascade, creating specificty
-    // issues
-    .reverse()
     .join('')
 
 const resolve = widths => {

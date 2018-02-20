@@ -21,7 +21,7 @@ Cell.propTypes = {
 }
 
 const widthMixins = {
-  default: css`
+  default: `
     width: auto;
     flex: 1;
   `,

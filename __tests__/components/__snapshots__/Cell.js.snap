@@ -18,20 +18,52 @@ exports[`Cell renders 1`] = `
 </div>
 `;
 
-exports[`Cell renders with proper width 1`] = `
+exports[`Cell renders with multiple widths 1`] = `
 .c0 {
   box-sizing: border-box;
   padding: 1em 0 0 1em;
   display: block;
+  width: 100%;
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
 }
 
-@media (min-width:1024px) {
+@media (min-width:768px) {
   .c0 {
     width: 50%;
   }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    width: 25%;
+  }
+}
+
+<div
+  className="c0"
+  width={
+    Array [
+      1,
+      "half",
+      0.25,
+    ]
+  }
+>
+  Test
+</div>
+`;
+
+exports[`Cell renders with proper width 1`] = `
+.c0 {
+  box-sizing: border-box;
+  padding: 1em 0 0 1em;
+  display: block;
+  width: 50%;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
 }
 
 <div

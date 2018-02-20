@@ -88,7 +88,7 @@ Assigns an individual `Cell`'s `display` property to `flex`. This is useful if y
 
 `width`
 
-Using a number or keyword, you can explicitly set the `width` of a `Cell` as a percentage value.
+Explicitly sets the width of a `Cell` as a percentage value using a number greater than 0 and less than or equal to 1.
 
 ```javascript
   // as number
@@ -99,7 +99,7 @@ Using a number or keyword, you can explicitly set the `width` of a `Cell` as a p
   <Cell width={0.25} /> // width: 25%
 ```
 
-The `Cell` component expects number values for its `width` prop to be greater than 0 and less than or equal to 1.
+You can also use keywords  `full`, `half`, `third`, and `fourth`to set the width.
 
 ```javascript
   // as keyword
@@ -108,8 +108,6 @@ The `Cell` component expects number values for its `width` prop to be greater th
   <Cell width="half" /> // width: 50%
 ```
 
-The available keywords for the `width` component are `full`, `half`, `third`, and `fourth`.
-
 | keyword | Width  |
 | ------- | ------ |
 | full    | 100%   |
@@ -117,48 +115,42 @@ The available keywords for the `width` component are `full`, `half`, `third`, an
 | third   | 33.33% |
 | fourth  | 25%    |
 
-**Media Queries**
+**Multiple widths**
 
-You can also set the width of `Cell` at different breakpoints by passing an array to the `width` prop. Each item in the array represents a different breakpoint.
+The `Cell` component supports multiple widths for different screen sizes. You can achieve this by passing an array to the `width` prop. `flexomatic` supports 3 screen sizes:
 
-```javascript
-<Cell width={[desktop, tablet, mobile]}>
-```
+| Base | Tablet | Desktop |
+| ---- | ------ | ------- |
+|      | 768px  | 1024px  |
 
-`flexomatic` uses 3 screen sizes for its media queries:
-
-| Desktop | Tablet | Mobile |
-| ------- | ------ | ------ |
-| 1024px  | 768px  | 320px  |
+Each item in the array represents a different size.
 
 ```javascript
   // as array
-  <Cell width={[0.25, 0.5, 1]} />
+  <Cell width={[base, tablet, desktop]} />
 
-  <Cell width={['fourth', 'half', 'full']} />
+  <Cell width={[1, 0.5, 0.25]} />
+
+  <Cell width={['full', 'half', 'fourth']} />
 ```
 
 The examples above will result in the styling:
 
 ```css
-@media (min-width: 320px) {
-  .Cell {
-    width: 100%;
-  }
-}
+.Cell {
+  width: 100%;
 
-@media (min-width: 768px) {
-  .Cell {
+  @media (min-width: 768px) {
     width: 50%;
   }
-}
 
-@media (min-width: 1024px) {
-  .Cell {
+  @media (min-width: 1024px) {
     width: 25%;
   }
 }
 ```
+
+ Note that it's not necessary to pass exactly 3 values to the width array, but more than 3 will result in an error.
 
 ## Contributing
 
