@@ -9,7 +9,7 @@ const Cell = styled.div`
   box-sizing: border-box;
   padding: 1em 0 0 1em;
   display: ${props => (props.flexed ? 'flex' : 'block')};
-  ${props => props.align && `align-self: ${align(props.align)}`};
+  align-self: ${props => align[props.align]};
   ${props => (props.width && props.width !== 'auto' ? widthMixins.custom : widthMixins.default)};
 `
 

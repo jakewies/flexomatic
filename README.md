@@ -119,7 +119,13 @@ The available keywords for the `width` component are `full`, `half`, `third`, an
 
 **Media Queries**
 
-You can also set the width of `Cell` at different screen sizes by passing an array to the `width` prop with each item in the array representing a different screen size. `flexomatic` uses 3 screen sizes for its media queries:
+You can also set the width of `Cell` at different breakpoints by passing an array to the `width` prop. Each item in the array represents a different breakpoint.
+
+```javascript
+<Cell width={[desktop, tablet, mobile]}>
+```
+
+`flexomatic` uses 3 screen sizes for its media queries:
 
 | Desktop | Tablet | Mobile |
 | ------- | ------ | ------ |

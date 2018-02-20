@@ -10,7 +10,7 @@ const Grid = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: ${props => props.direction};
-  align-items: ${props => props.align && align[props.align]};
+  align-items: ${props => align[props.align]};
   flex-wrap: wrap;
   list-style: none;
   margin: -1em 0 1em -1em;
