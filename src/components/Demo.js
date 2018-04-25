@@ -5,8 +5,8 @@ const Demo = styled.div`
   width: 100%;
   background: hsla(31, 15%, 50%, 0.1);
   text-align: center;
-  padding: 1em;
   border-radius: 2px;
+  padding: 1em;
 `
 
 export default Demo

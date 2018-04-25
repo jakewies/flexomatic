@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="flexomatic.png" alt="Flexomatic" title="Flexomatic" width="435" height="167.5" />
+  <img src="docs/static/flexomatic.png" alt="Flexomatic" title="Flexomatic" width="435" height="167.5" />
 </p>
 
 A component-based flexbox grid system for React, built with `styled-components` and based on the [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/demos/grids/) implementation.
@@ -70,6 +70,10 @@ Aligns `Cell` children using the `align-items` style. Available options:
 * `end`
 * `baseline`
 
+`spacing`
+
+A string value representing the default space between `Cell` components, or the "gutters" (default: "1em").
+
 ### Cell
 
 The individual columns of a grid.
@@ -99,7 +103,7 @@ Explicitly sets the width of a `Cell` as a percentage value using a number great
   <Cell width={0.25} /> // width: 25%
 ```
 
-You can also use keywords  `full`, `half`, `third`, and `fourth`to set the width.
+You can also use keywords `full`, `half`, `third`, and `fourth`to set the width.
 
 ```javascript
   // as keyword
@@ -150,7 +154,7 @@ The examples above will result in the styling:
 }
 ```
 
- Note that it's not necessary to pass exactly 3 values to the width array, but more than 3 will result in an error.
+Note that it's not necessary to pass exactly 3 values to the width array, but more than 3 will result in an error.
 
 ## Contributing
 

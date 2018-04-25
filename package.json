@@ -1,8 +1,7 @@
 {
   "name": "flexomatic",
-  "version": "1.0.0",
-  "description":
-    "A flexbox grid system built with styled-components based on the Solved by Flexbox implementation.",
+  "version": "1.1.0",
+  "description": "A flexbox grid system built with styled-components based on the Solved by Flexbox implementation.",
   "main": "lib/index.js",
   "author": "Jake Wiesler <jakewiesler@gmail.com> (https://www.jakewiesler.com/)",
   "license": "MIT",
@@ -17,17 +16,21 @@
   ],
   "scripts": {
     "build": "babel src -d lib",
+    "build:docs": "next build docs && next export docs",
     "clean:lib": "rimraf lib",
     "dev": "yarn clean:lib && babel src -w -d lib --source-maps inline",
+    "dev:docs": "next docs",
     "lint": "eslint src",
-    "prepublish": "yarn clean:lib && yarn build",
     "precommit": "yarn lint && yarn test",
+    "prepublishOnly": "yarn clean:lib && yarn build",
     "test": "jest",
     "test:watch": "jest --watch"
   },
   "devDependencies": {
+    "@sindresorhus/slugify": "^0.2.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
     "babel-plugin-styled-components": "^1.5.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
@@ -36,7 +39,11 @@
     "husky": "^0.14.3",
     "jest": "^22.3.0",
     "jest-styled-components": "^4.11.0-1",
+    "next": "^5.0.0",
     "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-live": "^1.10.1",
+    "react-markdown": "^3.2.2",
     "react-test-renderer": "^16.2.0",
     "rimraf": "^2.6.2",
     "styled-components": "^3.1.6"

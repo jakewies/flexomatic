@@ -7,7 +7,6 @@ import { string, number, array, bool, node, oneOfType } from 'prop-types'
 // see: https://stackoverflow.com/questions/45977114/using-proptypes-and-defaultprops-for-a-styled-component
 const Cell = styled.div`
   box-sizing: border-box;
-  padding: 1em 0 0 1em;
   display: ${props => (props.flexed ? 'flex' : 'block')};
   align-self: ${props => align[props.align]};
   ${props => (props.width && props.width !== 'auto' ? widthMixins.custom : widthMixins.default)};

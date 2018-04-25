@@ -3,7 +3,6 @@
 exports[`Cell renders 1`] = `
 .c0 {
   box-sizing: border-box;
-  padding: 1em 0 0 1em;
   display: block;
   width: auto;
   -webkit-flex: 1;
@@ -21,7 +20,6 @@ exports[`Cell renders 1`] = `
 exports[`Cell renders with multiple widths 1`] = `
 .c0 {
   box-sizing: border-box;
-  padding: 1em 0 0 1em;
   display: block;
   width: 100%;
   -webkit-flex: none;
@@ -58,7 +56,6 @@ exports[`Cell renders with multiple widths 1`] = `
 exports[`Cell renders with proper width 1`] = `
 .c0 {
   box-sizing: border-box;
-  padding: 1em 0 0 1em;
   display: block;
   width: 50%;
   -webkit-flex: none;

@@ -13,7 +13,8 @@ const Grid = styled.div`
   align-items: ${props => align[props.align]};
   flex-wrap: wrap;
   list-style: none;
-  margin: -1em 0 1em -1em;
+  margin: ${props =>
+    props.spacing ? `-${props.spacing} 0 ${props.spacing} -${props.spacing}` : '-1em 0 1em -1em'};
   padding: 0;
 
   &:last-child {
@@ -22,13 +23,15 @@ const Grid = styled.div`
 
   & ${Cell} {
     ${props => props.flexCells && 'display: flex;'};
+    padding: ${props => (props.spacing ? `${props.spacing} 0 0 ${props.spacing}` : '1em 0 0 1em')};
   }
 `
 
 Grid.propTypes = {
   flexCells: string,
   direction: string,
-  align: string
+  align: string,
+  spacing: string
 }
 
 export default Grid

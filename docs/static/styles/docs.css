@@ -1,0 +1,67 @@
+.example__md {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 25px;
+}
+
+.example__md h2 {
+  font-size: 2.5rem;
+  line-height: 1.618;
+}
+
+.example__md h3 {
+  font-size: 1.4rem;
+  line-height: 1.618;
+  margin-bottom: 1rem;
+}
+
+.fancyline {
+  max-width: 350px;
+  height: 4px;
+  background-image: linear-gradient(-225deg, #ac32e4 0%, #7918f2 48%, #4801ff 100%);
+  margin-bottom: 20px;
+}
+
+.example__md p {
+  line-height: 1.618;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.example__md code {
+  background: #eee;
+  color: #000;
+  padding: 4px;
+  font-size: 1rem;
+  font-family: Menlo, monospace;
+}
+
+.example__md ul {
+  padding-left: 36px;
+  margin-bottom: 1rem;
+}
+
+.example__md li {
+  line-height: 1.618;
+  font-size: 1.2rem;
+}
+
+.react-live {
+  /* flex-grow: 1; */
+  width: 100%;
+}
+
+.react-live pre {
+  white-space: pre-wrap;
+}
+
+@media (min-width: 768px) {
+  .example__md {
+    padding-right: 5rem;
+    margin-bottom: 0;
+  }
+
+  .react-live {
+    max-width: 600px;
+  }
+}
