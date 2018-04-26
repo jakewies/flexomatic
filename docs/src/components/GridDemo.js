@@ -4,7 +4,7 @@ import { Grid, Cell, Demo } from '../../../src'
 
 const StyledGrid = styled(Grid)`
   width: 100%;
-  max-width: 125px;
+  max-width: 175px;
   margin: 0 auto;
 `
 
