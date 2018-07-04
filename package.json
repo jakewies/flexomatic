@@ -1,6 +1,6 @@
 {
   "name": "flexomatic",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A flexbox grid system built with styled-components based on the Solved by Flexbox implementation.",
   "main": "lib/index.js",
   "author": "Jake Wiesler <jakewiesler@gmail.com> (https://www.jakewiesler.com/)",
